@@ -7,6 +7,11 @@ create table users(
     city_id int
 );
 
+create table admin(
+    id int not null AUTO_INCREMENT PRIMARY KEY,
+    user_id int
+)
+
 create table bmi(
     id int not null AUTO_INCREMENT PRIMARY KEY,
     user_id int,
@@ -28,12 +33,16 @@ create table cities(
 
 ALTER TABLE users
 ADD FOREIGN KEY (city_id)
-REFERENCES cities(id); 
+REFERENCES cities(id) ON DELETE SET NULL; 
 
 ALTER TABLE bmi
 ADD FOREIGN KEY (user_id)
-REFERENCES users(id);
+REFERENCES users(id) ON DELETE CASCADE;
 
 ALTER TABLE cities
 ADD FOREIGN KEY (state_id)
-REFERENCES states(id); 
+REFERENCES states(id);
+
+ALTER TABLE admin
+ADD FOREIGN KEY (user_id)
+REFERENCES users(id)  ON DELETE CASCADE;

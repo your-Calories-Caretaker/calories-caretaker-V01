@@ -2,12 +2,11 @@
 session_start();
 include('./config/connect.php');
 $email = $password = '';
-$password_not_hash = '';
+$password_not_hashed = '';
 $user_password = '';
 $errors = array('email'=>'','password'=>'');
 if(isset($_POST['login'])){
     $password_not_hashed = htmlspecialchars($_POST['password']);
-    print_r($_POST);
     $email = htmlspecialchars(strtolower(trim($_POST['email'])));
     $password = htmlspecialchars($_POST['password']);
     $sql = "SELECT * FROM users where email='$email'";
