@@ -9,7 +9,9 @@
 <body>
     <?php
     if (session_status() === PHP_SESSION_NONE) session_start();
-    include('./backend/get_bmi_status.php');
+    if(isset($_SESSION['id'])){
+        include('./backend/get_bmi_status.php');
+    }
     ?>
     <?php if(!isset($_SESSION['id'])){ ?>
         <p>Login signup first</p>
