@@ -1,4 +1,5 @@
-<?php include('./backend/signup.php') ?>
+<?php include('./backend/signup.php'); ?>
+<?php include('./backend/get_states.php'); ?>
 <?php include('./templates/navbar.php'); ?>
 <form action="./signup.php" method="POST">
     <label for="first_name">First Name</label>
@@ -27,13 +28,17 @@
         <p><?php echo $errors['confirm_password'];?></p>
     <?php } ?>
     <label for="state">Select State</label>
-    <select name="state" id="state">
-        <option value="1">Maharashtra</option>
+    <select name="state" id="state" class="state">
+        <option value="0">SELECT</option>
+        <?php for($i=0; $i<count($states_from_db); $i++) { ?>
+            <option value="<?php echo $states_from_db[$i]['id']?>"><?php echo $states_from_db[$i]['name'];?></option>
+        <?php } ?>
     </select><br>
     <label for="city">Select City</label>
-    <select name="city" id="city">
-        <option value="1">Mumbai</option>
+    <select name="city" id="city" class="city">
+        <!-- <option value="0">SELECT</option> -->
     </select><br>
     <input type="submit" name="sign_up" id="sign_up" value="Sign Up">
 </form>
 <?php include('./templates/footer.php'); ?>
+<script src="./assets/js/getCitiesFromStates.js"></script>
