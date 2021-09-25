@@ -1,0 +1,95 @@
+.login{
+    margin-top: 5%;
+    text-align: center;
+    background: linear-gradient(to right, #a894c7 ,#c09ac9);
+    color: white;
+    width: 75%;
+    height: 70%;
+    padding-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4rem;
+    padding-bottom: 30%;
+}
+
+.signup{
+    /* margin-top: 5%; */
+    text-align: center;
+    background: #a894c7ce;
+    color: white;
+    width: 45%;
+    height: 100%;
+    padding-top: 30px;
+    box-shadow: 5px 7px #4f465d88 ;
+    margin-left: 15%;
+    /* margin-right: auto; */
+    border-radius: 2rem;
+    padding-bottom: 50px;
+}
+
+.signup_body{
+    padding-top: 5%;
+    /* margin-top: -50px; */
+    background-image: url(signup.jpg);
+    background-size: 100%;
+    padding-bottom: 5%;
+}
+
+
+a{
+    /* color: white; */
+    text-decoration: none;
+}
+
+input{
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    width: 300px;
+    height: 36px;
+}
+
+label{
+    width: 180px;
+    text-align: left;
+    font-size: 1.4rem;
+    /* font-weight: bold; */
+}
+
+button{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 0.2rem 1.4rem;
+    margin-top: 1.2rem;  
+}
+
+#sign_up{
+    margin-top: 2.7rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+h1{
+    margin-bottom: 2rem;
+}
+
+.eror{
+    font-size:0.9rem;
+    /* color: red; */
+    
+}
+
+.city, .state{
+    font-size: 1.3rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 300px;
+    height: 36px;
+    margin-top: 1.5rem;
+}

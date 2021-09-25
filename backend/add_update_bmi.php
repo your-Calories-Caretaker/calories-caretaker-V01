@@ -34,6 +34,6 @@ if(isset($_POST['calculate'])){
             echo mysqli_error($conn);
         }
     }
-    header('Location: ./index.php');
+    // header('Location: ./index.php');
 }
 ?>
