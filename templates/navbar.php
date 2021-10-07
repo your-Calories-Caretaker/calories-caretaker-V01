@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/daily_calorie.css">
     <title>Calories Caretaker</title>
 </head>
-<body>
+<body> -->
     <?php
     if (session_status() === PHP_SESSION_NONE) session_start();
     if(isset($_SESSION['id'])){
@@ -34,7 +34,7 @@
                     <a class="nav-link" href="./profile.php#bmi">BMI Calculator</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Manage Calories</a>
+                    <a class="nav-link" href="daily-calorie.php">Calculate Calories</a>
                   </li>
                   <?php if(!isset($_SESSION['id'])){ ?>
                   <li class="nav-item">
