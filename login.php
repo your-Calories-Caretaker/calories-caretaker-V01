@@ -35,14 +35,20 @@
     </div>
     <div class="col-lg-6">
 
-        <div class="login">
+        <div class="login container">
             <h1>Login</h1>
             <form name="form1" action="./login.php" method="post" class="formmm ">
-                <input id="email" type="email" placeholder="Email" name="email" value="<?php echo $email ?>" required> <br>
-                <p class="eror"><?php echo $errors['email']; ?></p>
-                <input id="password" type="password" placeholder="Password" name="password" value="<?php echo $password_not_hashed ?>" required> <br>
-                <p class="eror"><?php echo $errors['password']; ?></p>
-                <a href=""> <button id="submit" type="submit" name="login" onclick="ValidateEmail(document.form1.email); ValidatePass(document.form1.pass)">Login</button> </a>
+                <div class="form-group row">
+                    <label for="email" class="col-md-2 col-sm-12">Email</label>
+                    <input id="email" type="email" placeholder="johndoe@email.com" name="email" value="<?php echo $email ?>" class="form-control col-md-8" required>
+                    <p class="eror"><?php echo $errors['email']; ?></p>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-md-2 col-sm-12">Password</label>
+                    <input id="password" type="password" placeholder="Password" name="password" value="<?php echo $password_not_hashed ?>" required class="col-md-10 form-control"> <br>
+                    <p class="eror"><?php echo $errors['password']; ?></p>
+                </div>
+                <a href=""><button id="submit" type="submit" name="login" onclick="ValidateEmail(document.form1.email); ValidatePass(document.form1.pass)" class="">Login</button></a>
             
             </form>
             <a href="index.php"> <button id="back" name="submit">Back</button> </a>

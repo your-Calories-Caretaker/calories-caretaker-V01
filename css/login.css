@@ -14,7 +14,7 @@
 
 .signup{
     /* margin-top: 5%; */
-    text-align: center;
+    /* text-align: center; */
     background: #a894c7ce;
     color: white;
     width: 45%;
@@ -41,21 +41,6 @@ a{
     text-decoration: none;
 }
 
-input{
-    border-radius: 5px;
-    border: 2px solid black;
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    width: 300px;
-    height: 36px;
-}
-
-label{
-    width: 180px;
-    text-align: left;
-    font-size: 1.4rem;
-    /* font-weight: bold; */
-}
 
 button{
     background-color: white;
@@ -89,7 +74,7 @@ h1{
     font-size: 1.3rem;
     border: 2px solid black;
     border-radius: 5px;
-    width: 300px;
-    height: 36px;
+    /* width: 300px;
+    height: 36px; */
     margin-top: 1.5rem;
 }

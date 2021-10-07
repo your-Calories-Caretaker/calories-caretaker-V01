@@ -46,7 +46,7 @@ if(isset($_POST['sign_up'])){
             echo mysqli_error($conn,$sql);
         }
     }else{
-        echo "cannot add it to database";
+        // echo "cannot add it to database";
     }
 }
 ?>

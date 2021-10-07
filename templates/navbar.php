@@ -30,20 +30,17 @@
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./profile.php#bmi">BMI Calculator</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="daily-calorie.php">Calculate Calories</a>
-                  </li>
                   <?php if(!isset($_SESSION['id'])){ ?>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login/Signup</a>
-                  </li> 
-                  <?php }else{ include('./backend/get_user_details.php');?>
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.php">Login/Signup</a>
+                    </li> 
+                    <?php }else{ include('./backend/get_user_details.php');?>
                     <li class="nav-item">
                         <a class="nav-link" href="./profile.php#bmi">Welcome&nbsp;<?php echo $user_details['first_name'] ?></a>
                     </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="daily-calorie.php">Calculate Calories</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li> 
