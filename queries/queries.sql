@@ -31,6 +31,20 @@ create table cities(
     city_name varchar(255) not null unique
 );
 
+create table categories(
+    id int not null AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255) not null unique
+)
+
+create table food_items(
+    item_id int not null AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255) not null,
+    category_id int,
+    serving_type varchar(255) not null,
+    weight varchar(255) not null
+    calories int,  
+)
+
 ALTER TABLE users
 ADD FOREIGN KEY (city_id)
 REFERENCES cities(id) ON DELETE SET NULL; 
@@ -46,3 +60,9 @@ REFERENCES states(id);
 ALTER TABLE admin
 ADD FOREIGN KEY (user_id)
 REFERENCES users(id)  ON DELETE CASCADE;
+
+ALTER TABLE food_items
+ADD FOREIGN KEY (item_id)
+REFERENCES categories(id)  ON DELETE CASCADE;
+
+ALTER TABLE food_items ADD UNIQUE (name);
