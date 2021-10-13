@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/daily_calorie.css">
+    <!-- <link rel="stylesheet" href="./css/daily_calorie.css"> -->
     <title>Calories Caretaker</title>
 </head>
 <body>

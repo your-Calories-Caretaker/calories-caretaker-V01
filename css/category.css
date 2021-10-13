@@ -1,0 +1,52 @@
+.crd{
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 20rem;
+    /* display: inline-block; */
+    padding-top: 7rem;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+h1{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.bg-img{
+    background-image: url("../img/fruits.jpg");
+    background-size: cover;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.crd_link{
+    background-image: url(./img/fruits.jpg);
+    text-decoration: none;
+    height: 100px;
+   width: 100%;
+}
+.bg-img{
+    background-image: url(./img/fruits.jpg);
+    height: 100px;
+    width: 100%; 
+} */
