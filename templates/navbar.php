@@ -36,7 +36,7 @@
                     </li> 
                     <?php }else{ include('./backend/get_user_details.php');?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./profile.php#bmi">Welcome&nbsp;<?php echo $user_details['first_name'] ?></a>
+                        <a class="nav-link" href="./category.php">Add/Update</a>
                     </li> 
                     <li class="nav-item">
                       <a class="nav-link" href="profile.php">

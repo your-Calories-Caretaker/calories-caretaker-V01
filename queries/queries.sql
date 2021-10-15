@@ -45,6 +45,14 @@ create table food_items(
     calories int,  
 )
 
+create table history(
+    id int not null AUTO_INCREMENT PRIMARY KEY,
+    user_id int,
+    item_id int,
+    quantity int,
+    added_at date default current_timestamp()
+)
+
 ALTER TABLE users
 ADD FOREIGN KEY (city_id)
 REFERENCES cities(id) ON DELETE SET NULL; 
@@ -66,3 +74,11 @@ ADD FOREIGN KEY (item_id)
 REFERENCES categories(id)  ON DELETE CASCADE;
 
 ALTER TABLE food_items ADD UNIQUE (name);
+
+ALTER TABLE history
+ADD FOREIGN KEY (user_id)
+REFERENCES users(id)  ON DELETE CASCADE;
+
+ALTER TABLE history
+ADD FOREIGN KEY (item_id)
+REFERENCES food_items(item_id)  ON DELETE CASCADE;
