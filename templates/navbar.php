@@ -39,7 +39,15 @@
                         <a class="nav-link" href="./profile.php#bmi">Welcome&nbsp;<?php echo $user_details['first_name'] ?></a>
                     </li> 
                     <li class="nav-item">
-                      <a class="nav-link" href="daily-calorie.php">Calculate Calories</a>
+                      <a class="nav-link" href="profile.php">
+                      <?php
+                      if(!$is_bmi){
+                      ?>
+                      <?php echo "Calculate BMI" ?>
+                      <?php }else { ?>
+                        Your BMI count is <?php echo $bmi_count ?> 
+                      <?php } ?>
+                      </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
