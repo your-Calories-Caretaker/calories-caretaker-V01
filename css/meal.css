@@ -2,9 +2,9 @@
     text-align: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
-    height: 20rem;
+    height: 15rem;
     /* display: inline-block; */
-    padding-top: 7rem;
+    padding-top: 5rem;
     vertical-align: middle;
     line-height: normal;
 }
@@ -15,7 +15,7 @@ h1{
     line-height: normal;
 }
 
-.bg-img{
+/* .bg-img{
     background-image: url("../img/fruits.jpg");
     background-size: cover;    
-}
+} */
