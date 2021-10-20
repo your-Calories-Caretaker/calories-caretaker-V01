@@ -19,8 +19,25 @@
     include('./templates/navbar.php');
     ?>
     <?php include('./backend/get_items.php') ?>
+    <div class="container mt-5">
+        <label for="meal_type">Selected Meal Type is</label>
+        <select name="meal_type form-control" id="meal_type">
+            <option value="breakfast" <?php if($_SESSION['type'] == 'breakfast') echo "SELECTED";?>>
+                Breakfast
+            </option>        
+            <option value="lunch" <?php if($_SESSION['type'] == 'lunch') echo "SELECTED";?>>
+                Lunch
+            </option>
+            <option value="snacks" <?php if($_SESSION['type'] == 'snacks') echo "SELECTED";?>>
+                Snacks
+            </option>
+            <option value="dinner" <?php if($_SESSION['type'] == 'dinner') echo "SELECTED";?>>
+                Dinner
+            </option>
+        </select>
+    </div>  
     <?php if ($can_show_items) { ?>
-        <div class="row m-5" count="<?php echo $_SESSION['id']?>">
+        <div class="row m-5" count="<?php echo $_SESSION['id']?>" type="<?php echo $_SESSION['type']?>">
             <?php for ($i = 0; $i < count($items); $i++) { ?>
                 <div class="col-md-4 my-3">
                     <div class="card text-center">
@@ -55,7 +72,7 @@
     <?php } ?>
 </body>
 <script src="./assets/js/items_plus_minus.js"></script>
-<script src="./assets/js/add_items_to_db.js"></script>
+<script src="./assets/js/add_items_to_db.js?t=<?php echo time(); ?>"></script>
 <?php
 include('./templates/footer.php');
 ?>

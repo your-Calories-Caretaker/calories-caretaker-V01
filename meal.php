@@ -11,6 +11,7 @@
 </head>
 <body>
 <?php include('./templates/navbar.php'); ?>
+    <?php unset($_SESSION['type']); ?>
     <?php include('./templates/footer.php'); ?>
 
     <div class="row m-4">

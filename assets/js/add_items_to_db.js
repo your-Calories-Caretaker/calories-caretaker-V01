@@ -10,7 +10,9 @@ add_button.forEach(button=>{
         let quantity_div = button.previousElementSibling;
         quantity_div = quantity_div.children;
         const quantity = quantity_div[1].value;
-        let query_parameters = `user_id=${user_id}&item_id=${item_id}&quantity=${quantity}`;
+        const meal_type = document.querySelector('#meal_type').value;
+        console.log(meal_type); 
+        let query_parameters = `user_id=${user_id}&item_id=${item_id}&quantity=${quantity}&type=${meal_type}`;
         if(Number(quantity) != 0){
             const send_req = await fetch(url+query_parameters);
             const ans = await send_req.json();
