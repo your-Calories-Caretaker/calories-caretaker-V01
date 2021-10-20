@@ -19,7 +19,7 @@
     include('./templates/navbar.php');
     ?>
     <?php include('./backend/get_items.php') ?>
-    <div class="container mt-5">
+    <div class="container mt-5" id="select_meal_type">
         <label for="meal_type">Selected Meal Type is</label>
         <select name="meal_type form-control" id="meal_type">
             <option value="breakfast" <?php if($_SESSION['type'] == 'breakfast') echo "SELECTED";?>>

@@ -1,0 +1,46 @@
+body{
+    overflow-x: hidden;
+}
+
+.details{
+    /* background-color: #ff81ff; */
+    width: 50%;
+    margin: 2rem ;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+p{
+    display: inline-block;
+    font-size: 1.7rem;
+}
+.lbl{
+    width: 100px;
+    font-weight: bold;
+}
+#bmi{
+    margin: 2rem;
+    /* background-color: #8fddff6e; */
+    width: 51%;
+    /* margin: 2rem auto 0px auto; */
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 200px; */
+    
+}
+
+input{
+    width: 250px;
+    margin-bottom: 40px;
+}
+select{
+    width: 150px;
+}
+#calculate{
+    margin: auto;
+    width: 150px;
+    margin-left: 50px;
+}

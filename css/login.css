@@ -3,7 +3,7 @@
     text-align: center;
     background: linear-gradient(to right, #a894c7 ,#c09ac9);
     color: white;
-    width: 75%;
+    width: 70%;
     height: 70%;
     padding-top: 10%;
     margin-left: auto;
@@ -37,6 +37,7 @@
     background-size: fill;
     background-size: 100%;
     padding-bottom: 5%;
+    background-attachment: fixed;
 }
 
 
@@ -60,7 +61,7 @@ button{
     margin-top: 2.7rem;
 }
 
-p{
+p, .label{
     font-size: 1.5rem;
 }
 

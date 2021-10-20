@@ -21,7 +21,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.php">Calorie Caretaker</a>
+              <a class="navbar-brand" href="index.php"><img src="./img/logo.png" class="logo_img"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -36,17 +36,13 @@
                     </li> 
                     <?php }else{ include('./backend/get_user_details.php');?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./category.php">Add/Update</a>
+                        <a class="nav-link" href="./meal.php">Add Meal</a>
                     </li> 
                     <li class="nav-item">
                       <a class="nav-link" href="profile.php">
-                      <?php
-                      if(!$is_bmi){
-                      ?>
-                      <?php echo "Calculate BMI" ?>
-                      <?php }else { ?>
-                        Your BMI count is <?php echo $bmi_count ?> 
-                      <?php } ?>
+                     
+                        Welcome, <?php echo $user_details['first_name'] ?> 
+                      
                       </a>
                     </li>
                     <li class="nav-item">

@@ -13,4 +13,19 @@
 } */
 body{
     overflow-x: hidden;
+    background-image: url('../img/home.jpg');
+    background-size: cover;
+}
+
+h1{
+    color: white;
+    font-size: 4.5rem;
+    margin: 3rem 2rem 0rem ;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.butn{
+    margin-left: 3rem;
+    margin-top: 0;
 }

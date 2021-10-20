@@ -59,3 +59,10 @@ th, td{
     width: 45%;
     margin: 0;
 }   
+
+#select_meal_type{
+    font-size: 1.5rem;
+}
+#select_meal_type>select{
+    width: 150px;
+}

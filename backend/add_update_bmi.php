@@ -24,7 +24,8 @@ if(isset($_POST['calculate'])){
     $bmi = number_format($weight_in_kg/($height_in_meters*$height_in_meters),2);
     $user_id = $_SESSION['id'];
     $date = $today = date("Y-m-d");
-    echo $date;
+    // echo $date;
+    // echo "<h3>Your BMI is </h3>".$bmi;
     if(!$is_bmi){
         $sql = "INSERT into bmi(user_id,weight,height,BMI) VALUES($user_id,$weight_in_kg,$height_in_meters,$bmi)";
         mysqli_query($conn,$sql);
@@ -34,6 +35,6 @@ if(isset($_POST['calculate'])){
             echo mysqli_error($conn);
         }
     }
-    // header('Location: ./index.php');
+    header('Location: ./profile.php');
 }
 ?>

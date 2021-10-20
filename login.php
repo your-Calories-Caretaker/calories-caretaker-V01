@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <!-- <link rel="stylesheet" href="./css/home.css"> -->
     <link rel="stylesheet" href="./css/login.css">
     <!-- <link rel="stylesheet" href="./css/daily_calorie.css"> -->
     <title>Calories Caretaker</title>
@@ -39,12 +39,12 @@
             <h1>Login</h1>
             <form name="form1" action="./login.php" method="post" class="formmm ">
                 <div class="form-group row">
-                    <label for="email" class="col-md-2 col-sm-12">Email</label>
+                    <label for="email" class="col-md-2 col-sm-12 label">Email</label>
                     <input id="email" type="email" placeholder="johndoe@email.com" name="email" value="<?php echo $email ?>" class="form-control col-md-8" required>
                     <p class="eror"><?php echo $errors['email']; ?></p>
                 </div>
                 <div class="form-group row">
-                    <label for="password" class="col-md-2 col-sm-12">Password</label>
+                    <label for="password" class="col-md-2 col-sm-12 label">Password</label>
                     <input id="password" type="password" placeholder="Password" name="password" value="<?php echo $password_not_hashed ?>" required class="col-md-10 form-control"> <br>
                     <p class="eror"><?php echo $errors['password']; ?></p>
                 </div>

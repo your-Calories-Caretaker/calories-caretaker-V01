@@ -1,8 +1,18 @@
 
-
+body{
+    overflow-x: hidden;
+}
 header{
     background-color: rgb(60, 61, 107);
 }
 li > a.nav-link{
     color: white !important;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+
+img.logo_img{
+    width: 200px;
 }

@@ -15,7 +15,52 @@ h1{
     line-height: normal;
 }
 
-.bg-img{
+#Fruit{
     background-image: url("../img/fruits.jpg");
     background-size: cover;    
+}
+
+.bg-img{
+    background-image: url("../img/icecream.jpg");
+    background-size: cover;  
+}
+
+#Noodles{
+    background-image: url("../img/noodles.jpg");
+    background-size: cover;  
+}
+
+#Pasta{
+    background-image: url("../img/pasta.jpeg");
+    background-size: cover;  
+}
+
+#Pizza{
+    background-image: url("../img/pizza.jpg");
+    background-size: cover; 
+}
+
+#Plant{
+    background-image: url("../img/plant.jpg");
+    background-size: cover; 
+}
+
+#Sauce{
+    background-image: url("../img/sauce.webp");
+    background-size: cover; 
+}
+
+#Salad{
+    background-image: url("../img/salad.jfif");
+    background-size: cover; 
+}
+
+#Soup{
+    background-image: url("../img/soup.jpg");
+    background-size: cover; 
+}
+
+#Vegetable{
+    background-image: url("../img/vegetable.jpg");
+    background-size: cover; 
 }

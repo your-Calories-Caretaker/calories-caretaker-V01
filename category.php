@@ -20,16 +20,10 @@
     <?php include('./backend/get_category.php'); ?>
     <?php include("./backend/set_meal_type.php"); ?>
     <div class="row m-4">
+        <h1>Select Your Meal Category: </h1>
         <?php for ($i = 0; $i < count($categories); $i++) { ?>
             <div class="col-sm-4 my-3">
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $categories[$i]['name'] ?></h5>
-                        <a href="./items.php?id=<?php echo $categories[$i]['id'];?>" class="btn btn-primary">Had Which <?php echo $categories[$i]['name'] ?>? </a>
-                    </div>
-                    
-                </div> -->
-                <div class="bg-img">
+                <div class="bg-img" id="<?php echo $categories[$i]['name'] ?>">
                     <a href="./items.php?id=<?php echo $categories[$i]['id'];?>" class="crd_link">
                         <div class="crd">
                             <h1><?php echo $categories[$i]['name'] ?></h1>

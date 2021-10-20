@@ -16,7 +16,7 @@
 
     <div class="row m-4">
         <div class="col-sm-3 my-3">
-            <div class="bg-img">
+            <div class="bg-img" id="breakfast">
                 <a href="./category.php?type=b" class="crd_link">
                     <div class="crd">
                         <h1>BREAKFAST</h1>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col-sm-3 my-3">
-            <div class="bg-img">
+            <div class="bg-img" id="lunch">
                 <a href="./category.php?type=l" class="crd_link">
                     <div class="crd">
                         <h1>LUNCH</h1>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-sm-3 my-3">
-            <div class="bg-img">
+            <div class="bg-img" id="snacks">
                 <a href="./category.php?type=s" class="crd_link">
                     <div class="crd">
                         <h1>SNACKS</h1>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="col-sm-3 my-3">
-            <div class="bg-img">
+            <div class="bg-img" id="dinner">
                 <a href="./category.php?type=d" class="crd_link">
                     <div class="crd">
                         <h1>DINNER</h1>
