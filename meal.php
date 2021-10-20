@@ -57,19 +57,25 @@
                     <th>#</th>
                     <th>Food</th>
                     <th>Food Type</th>
+                    <th>Quantity</th>
                     <th>Calories</th>
                     <th>Meal Time</th>
+                    <th>Date</th>
                 </tr>
             </thead>
+            <?php include('./backend/get_history.php'); ?>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Cheeze Pizza</td>
-                    <td>Pizza</td>
-                    <td>280</td>
-                    <td>Snacks</td>
-
-                </tr>
+                <?php for($i=0; $i<count($details); $i++){ ?>
+                    <tr>
+                        <td><?php echo $i+1 ?></td>
+                        <td><?php echo $details[$i][0];?></td>
+                        <td><?php echo $details[$i][2];?></td>
+                        <td><?php echo $details[$i]['quantity'];?></td>
+                        <td><?php echo $details[$i][1];?></td>
+                        <td><?php echo $details[$i]['meal_type'];?></td>
+                        <td><?php echo $details[$i]['added_at'];?></td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
     </div>
