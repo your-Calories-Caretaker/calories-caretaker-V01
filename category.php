@@ -18,6 +18,8 @@
     <?php include('./templates/navbar.php'); ?>
     <?php include('./templates/footer.php'); ?>
     <?php include('./backend/get_category.php'); ?>
+    <?php include("./backend/set_meal_type.php"); ?>
+    <?php print_r($_SESSION); ?>
     <div class="row m-4">
         <?php for ($i = 0; $i < count($categories); $i++) { ?>
             <div class="col-sm-4 my-3">

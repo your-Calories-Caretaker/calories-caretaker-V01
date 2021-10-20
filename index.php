@@ -12,7 +12,7 @@
     <title>Calories Caretaker</title>
 </head>
 <body>
-<?php include './templates/navbar.php'; ?>
+    <?php include './templates/navbar.php'; ?>
 <div class="row">
     <div class="main_text col-lg-3">
         <h1>Want a Healthy Diet?<br>Your Calorie Caretake has got your back</h1><br>

@@ -16,7 +16,7 @@
     <div class="row m-4">
         <div class="col-sm-3 my-3">
             <div class="bg-img">
-                <a href="http://localhost/calories-caretaker-V01/category.php" class="crd_link">
+                <a href="./category.php?type=b" class="crd_link">
                     <div class="crd">
                         <h1>BREAKFAST</h1>
                     </div>
@@ -25,7 +25,7 @@
         </div>
         <div class="col-sm-3 my-3">
             <div class="bg-img">
-                <a href="./items.php?id=<?php echo $categories[$i]['id'];?>" class="crd_link">
+                <a href="./category.php?type=l" class="crd_link">
                     <div class="crd">
                         <h1>LUNCH</h1>
                     </div>
@@ -34,7 +34,7 @@
         </div>
         <div class="col-sm-3 my-3">
             <div class="bg-img">
-                <a href="./items.php?id=<?php echo $categories[$i]['id'];?>" class="crd_link">
+                <a href="./category.php?type=s" class="crd_link">
                     <div class="crd">
                         <h1>SNACKS</h1>
                     </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="col-sm-3 my-3">
             <div class="bg-img">
-                <a href="./items.php?id=<?php echo $categories[$i]['id'];?>" class="crd_link">
+                <a href="./category.php?type=d" class="crd_link">
                     <div class="crd">
                         <h1>DINNER</h1>
                     </div>

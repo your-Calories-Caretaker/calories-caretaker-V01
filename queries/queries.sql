@@ -82,3 +82,6 @@ REFERENCES users(id)  ON DELETE CASCADE;
 ALTER TABLE history
 ADD FOREIGN KEY (item_id)
 REFERENCES food_items(item_id)  ON DELETE CASCADE;
+
+ALTER table history
+ADD meal_type varchar(255);
