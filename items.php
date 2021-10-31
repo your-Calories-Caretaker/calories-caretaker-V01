@@ -8,10 +8,10 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/navbar.css?t=<?php echo time();?>">
     <!-- <link rel="stylesheet" href="./css/home.css"> -->
     <!-- <link rel="stylesheet" href="./css/login.css"> -->
-    <link rel="stylesheet" href="./css/items.css">
+    <link rel="stylesheet" href="./css/items.css?t=<?php echo time();?>">
 </head>
 
 <body>

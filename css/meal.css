@@ -3,11 +3,12 @@
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     height: 19rem;
-    width: 19rem;
+    width: 22rem;
     /* display: inline-block; */
     padding-top: 7.5rem;
     vertical-align: middle;
     line-height: normal;
+    border-radius: 6px;
 }
 
 h1{
