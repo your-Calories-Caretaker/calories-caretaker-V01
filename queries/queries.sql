@@ -53,6 +53,19 @@ create table history(
     added_at date default current_timestamp()
 )
 
+create table item_suggestions(
+    id int not null AUTO_INCREMENT PRIMARY KEY,
+    item_name varchar(255) not null,
+    category_id int,
+    user_id int
+)
+
+create table category_suggestions(
+    id int not null AUTO_INCREMENT PRIMARY KEY,
+    category_name varchar(255) not null,
+    user_id int
+)
+
 ALTER TABLE users
 ADD FOREIGN KEY (city_id)
 REFERENCES cities(id) ON DELETE SET NULL; 
@@ -85,3 +98,15 @@ REFERENCES food_items(item_id)  ON DELETE CASCADE;
 
 ALTER table history
 ADD meal_type varchar(255);
+
+ALTER TABLE item_suggestions
+ADD FOREIGN KEY (user_id)
+REFERENCES users(id)  ON DELETE CASCADE;
+
+ALTER TABLE item_suggestions
+ADD FOREIGN KEY (category_id)
+REFERENCES categories(id)  ON DELETE CASCADE;
+
+ALTER TABLE category_suggestions
+ADD FOREIGN KEY (user_id)
+REFERENCES users(id)  ON DELETE CASCADE;

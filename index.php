@@ -26,6 +26,4 @@
         <img src="img/main.png" alt="" width = 100%>
     </div> -->
 </div>
-<div class="footer-index">
-    <?php include './templates/footer.php'; ?>
-</div>
+<?php include './templates/footer.php'; ?>
