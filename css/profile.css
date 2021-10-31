@@ -1,46 +1,104 @@
 body{
     overflow-x: hidden;
 }
-
-.details{
-    /* background-color: #ff81ff; */
-    width: 50%;
-    margin: 2rem ;
-    padding: 10px;
-    border-radius: 15px;
+h2, h4{
+    text-align: center;
+    margin-top: 0;
 }
+
 
 p{
     display: inline-block;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    padding-left: 2rem;
 }
-.lbl{
-    width: 100px;
-    font-weight: bold;
-}
-#bmi{
-    margin: 2rem;
-    /* background-color: #8fddff6e; */
-    width: 51%;
-    /* margin: 2rem auto 0px auto; */
-    padding: 10px;
-    border-radius: 15px;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    /* height: 200px; */
-    
+span{
+    padding-left: 2rem;
+    font-size: 1.5rem;
 }
 
-input{
-    width: 250px;
-    margin-bottom: 40px;
+.details{
+    margin-top: 2rem;
 }
-select{
-    width: 150px;
+.col-md-3{
+    background-color: #0084ff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    /* display: inline */    
 }
-#calculate{
+.col-md-12{
+   display: flex;
+   flex-direction: column;
+}
+
+
+.col-md-9{
+    /* background-color: blue; */
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.profile_img{
     margin: auto;
-    width: 150px;
-    margin-left: 50px;
+    width: 17vw;
+    height: 17vw;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 2rem ;
+    margin-bottom: 1rem;
 }
+
+a:hover{
+    background-color: aqua;
+    text-decoration: none;
+}
+
+.buton{
+    margin: auto;
+    width: 60%;
+    font-size: 2.0rem;
+}
+  /*------------------------------------------ Tab Formatting ------------------------------ */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+    /* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+    background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+    background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    }
