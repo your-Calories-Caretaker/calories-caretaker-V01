@@ -80,5 +80,5 @@
             </form>
         </div>
     </div>
-    <?php include('./templates/footer.php'); ?>
+    <!-- <?php include('./templates/footer.php'); ?> -->
     <script src="./assets/js/getCitiesFromStates.js"></script>

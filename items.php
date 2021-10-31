@@ -12,6 +12,7 @@
     <!-- <link rel="stylesheet" href="./css/home.css"> -->
     <!-- <link rel="stylesheet" href="./css/login.css"> -->
     <link rel="stylesheet" href="./css/items.css?t=<?php echo time();?>">
+    <link rel="stylesheet" href="./css/footer.css?t=<?php echo time();?>">
 </head>
 
 <body>
@@ -70,7 +71,6 @@
             <?php } ?>
         </div>
     <?php } ?>
-</body>
 <script src="./assets/js/items_plus_minus.js"></script>
 <script src="./assets/js/add_items_to_db.js?t=<?php echo time(); ?>"></script>
 <?php

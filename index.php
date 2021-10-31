@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/home.css?t=<?php echo time();?>">
     <link rel="stylesheet" href="./css/login.css?t=<?php echo time();?>">
     <link rel="stylesheet" href="./css/daily_calorie.css?t=<?php echo time();?>">
+    <link rel="stylesheet" href="./css/footer.css?t=<?php echo time();?>">
+
     <title>Calories Caretaker</title>
 </head>
 <body>
@@ -24,4 +26,6 @@
         <img src="img/main.png" alt="" width = 100%>
     </div> -->
 </div>
-<?php include './templates/footer.php'; ?>
+<div class="footer-index">
+    <?php include './templates/footer.php'; ?>
+</div>

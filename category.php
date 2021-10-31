@@ -8,15 +8,12 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/navbar.css?t=<?php echo time();?>">
-    <!-- <link rel="stylesheet" href="./css/home.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/daily_calorie.css"> -->
     <link rel="stylesheet" href="./css/category.css?t=<?php echo time();?>">
+    <link rel="stylesheet" href="./css/footer.css?t=<?php echo time();?>">
 </head>
 
 <body>
     <?php include('./templates/navbar.php'); ?>
-    <?php include('./templates/footer.php'); ?>
     <?php include('./backend/get_category.php'); ?>
     <?php include("./backend/set_meal_type.php"); ?>
     <div class="row m-4">
@@ -33,6 +30,4 @@
             </div>
         <?php } ?>
     </div>
-</body>
-
-</html>
+    <?php include('./templates/footer.php'); ?>
