@@ -7,4 +7,8 @@
     $sql = "SELECT city_name from cities where id={$user_details['city_id']}";
     $res = mysqli_query($conn,$sql);
     $city_name = mysqli_fetch_array($res);
+    $sql = "SELECT * from bmi WHERE user_id=$user_id;";
+    $res = mysqli_query($conn,$sql);
+    $user_bmi = mysqli_fetch_array($res);
+    // print_r($user_bmi);
 ?>

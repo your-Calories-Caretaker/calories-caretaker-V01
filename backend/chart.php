@@ -8,6 +8,7 @@ for ($i=0; $i<count($data); $i++){
     $res = mysqli_query($conn,$sql);
     $cal = mysqli_fetch_array($res);
     $data[$i]['calorie'] = $cal['calories'];
+    $data[$i]['color'] = '#'.rand(100000,999999);
 }
 echo json_encode($data);
 ?>
