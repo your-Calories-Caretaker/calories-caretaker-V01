@@ -79,3 +79,68 @@ $(document).ready(function () {
         }
     })
 });
+
+
+$(document).ready(function () {
+    $.ajax({
+        url: "./backend/pieChart.php",
+        method: "GET",
+        success: function (data) {
+            // data = JSON.parse(data);
+            const category = [];
+            const colors = [];
+            data = JSON.parse(data);
+            for (let i = 0; i < data.length; i++) {
+                if (!category.includes(data[i].category)) {
+                    category.push(data[i].category);
+                    colors.push(data[i].color);
+                }
+            }
+            // console.log(data);
+            console.log(colors);
+            console.log(category);
+            let calories = [];
+            for (let i = 0; i < category.length; i++) {
+                let sum = 0;
+                for (let j = 0; j < data.length; j++) {
+                    if (data[j].category == category[i]) {
+                        sum += Number(data[j].quantity) * Number(data[j].calories);
+                    }
+                }
+                calories.push(sum);
+            }
+            console.log(calories);
+
+            let pieChart_data = {
+                labels: category,
+                datasets: [
+                    {
+                        label: 'Calories',
+                        backgroundColor: colors,
+                        color: "#fff",
+                        data: calories
+                    }
+                ]
+            };
+
+            let options = {
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 0
+                        }
+                    }]
+                }
+            };
+            let graph_2 = $('#graph_2');
+            let graph2 = new Chart(graph_2, {
+                type: 'doughnut',
+                data: pieChart_data
+            });
+        },
+        error: function (data) {
+            console.log(data);
+        }
+    })
+});

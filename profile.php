@@ -57,12 +57,10 @@
       </div>
 
       <div id="London" class="tabcontent col-12">
-        <h3>Calories Per Day</h3>
         <canvas id="graph_1"></canvas>
       </div>
       <div id="Paris" class="tabcontent col-md-12">
-        <h3>Paris</h3>
-        <img src="barchart_2.jpg" alt="">
+        <canvas id="graph_2"></canvas>
       </div>
     </div>
   </div>
