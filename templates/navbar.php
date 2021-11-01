@@ -1,5 +1,6 @@
     <?php
     if (session_status() === PHP_SESSION_NONE) session_start();
+    // print_r($_SESSION);
     if(isset($_SESSION['id'])){
         include('./backend/get_bmi_status.php');
     }

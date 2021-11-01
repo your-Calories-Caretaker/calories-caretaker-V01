@@ -110,3 +110,19 @@ REFERENCES categories(id)  ON DELETE CASCADE;
 ALTER TABLE category_suggestions
 ADD FOREIGN KEY (user_id)
 REFERENCES users(id)  ON DELETE CASCADE;
+
+ALTER TABLE item_suggestions
+	ADD current_status VARCHAR(50) default 'Pending'
+    AFTER user_id;
+
+ALTER TABLE item_suggestions
+	ADD cancellation_reason VARCHAR(255) default null
+    AFTER current_status;
+
+ALTER TABLE category_suggestions
+	ADD current_status VARCHAR(50) default 'Pending'
+    AFTER user_id;
+
+ALTER TABLE category_suggestions
+	ADD cancellation_reason VARCHAR(255) default null
+    AFTER current_status;

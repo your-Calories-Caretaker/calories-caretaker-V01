@@ -25,6 +25,7 @@
     header('Location: ./login.php');
   }
   include('./backend/get_user_details.php');
+  include('./backend/get_requests.php');
   ?>
   <?php include('./templates/navbar.php');
   include('./backend/add_update_bmi.php');
@@ -45,7 +46,7 @@
           <?php } ?>
         </div>
         <button class="w-50 mx-auto my-2 bmi-button btn btn-outline-dark"><?php if (!$is_bmi) { ?>
-            <?php echo "Calculate BMI"?>
+            <?php echo "Calculate BMI" ?>
           <?php } else { ?>
             <?php echo "Update BMI" ?>
           <?php } ?></button>
@@ -65,32 +66,88 @@
     </div>
   </div>
   <div class="popup-wrapper">
-        <div class="popup">
-            <div class="popup-close">
-                X
-            </div>
-            <div class="popup-content">
-              <div class="container my-3">
-                <form action="./profile.php" method="POST">
-                  <label for="height" class="lbl">Height</label>
-                  <select name="height_unit" class="form-control" id="height_unit">
-                      <option value="centimeter" selected>centimeters</option>
-                      <option value="inch">inches</option>
-                      <option value="feet">feets</option>
-                  </select> 
-                  <input type="text" name="height" id="height" class="form-control" placeholder="Enter Height">
-                  <label for="weight" class="lbl">Weight</label>
-                  <select name="weight_unit" class="form-control" id="weight_unit">
-                      <option value="pound" selected>pounds</option>
-                      <option value="kilogram">kilograms</option>
-                  </select>
-                  <input type="text" class="form-control" name="weight" id="weight" placeholder="Enter Weight">
-                  <input type="submit" name="calculate" class="btn btn-outline-success" id="calculate" value="Calculate" >
-               </form>
-              </div>
-            </div>
+    <div class="popup">
+      <div class="popup-close">
+        X
+      </div>
+      <div class="popup-content">
+        <div class="container my-3">
+          <form action="./profile.php" method="POST">
+            <label for="height" class="lbl">Height</label>
+            <select name="height_unit" class="form-control" id="height_unit">
+              <option value="centimeter" selected>centimeters</option>
+              <option value="inch">inches</option>
+              <option value="feet">feets</option>
+            </select>
+            <input type="text" name="height" id="height" class="form-control" placeholder="Enter Height">
+            <label for="weight" class="lbl">Weight</label>
+            <select name="weight_unit" class="form-control" id="weight_unit">
+              <option value="pound" selected>pounds</option>
+              <option value="kilogram">kilograms</option>
+            </select>
+            <input type="text" class="form-control" name="weight" id="weight" placeholder="Enter Weight">
+            <input type="submit" name="calculate" class="btn btn-outline-success" id="calculate" value="Calculate">
+          </form>
         </div>
+      </div>
     </div>
+  </div>
+  <?php if ($item_suggestions_there) { ?>
+    <div class="container my-3">
+      <div class="text-center">
+        <p class="h3">Items Suggested</p>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">From Category</th>
+            <th scope="col">Current Status</th>
+            <th scope="col">Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php for($i=0; $i<count($item_suggestions);$i++){ ?>
+            <tr>
+              <th scope="row"><?php echo $i+1 ?></th>
+              <td><?php echo $item_suggestions[$i]['item_name']; ?></td>
+              <td><?php echo $item_suggestions[$i]['from_category']; ?></td>
+              <td><?php echo $item_suggestions[$i]['current_status']; ?></td>
+              <td><?php echo $item_suggestions[$i]['message']; ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+  <?php } ?>
+  <?php if ($category_suggestions_there) { ?>
+    <div class="container my-3">
+      <div class="text-center">
+        <p class="h3">Category Suggested</p>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Current Status</th>
+            <th scope="col">Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php for($i=0; $i<count($category_suggestions);$i++){ ?>
+            <tr>
+              <th scope="row"><?php echo $i+1 ?></th>
+              <td><?php echo $category_suggestions[$i]['category_name']; ?></td>
+              <td><?php echo $category_suggestions[$i]['current_status']; ?></td>
+              <td><?php echo $category_suggestions[$i]['message']; ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+  <?php } ?>
   <!-- New End------------------------------------------------------------ -->
   <?php include('./templates/footer.php'); ?>
   <script src="./assets/js/get_chart.js"></script>
